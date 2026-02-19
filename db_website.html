@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Distortion Bahn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Distortion Bahn — signal lost, rhythm found." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --red: #ff0000;
+      --black: #000000;
+      --off: #ededed;
+    }
+
+    html, body {
+      background: var(--black);
+      color: var(--off);
+      font-family: Arial Narrow, Inter, system-ui, sans-serif;
+      letter-spacing: 0.03em;
+      margin: 0;
+    }
+
+    a {
+      color: var(--off);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--red);
+    }
+
+    .scanlines::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.02) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .section {
+      padding: 5rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .glitch {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .rail {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #ff0000, transparent);
+      margin: 2rem 0;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="scanlines">
+
+  <section class="vh-100 d-flex align-items-center text-center">
+    <div class="container">
+      <h1 class="glitch display-6 mb-4">DISTORTION BA̶HN</h1>
+      <p>∿ signal lost • ⌁ rhythm found<br />[ delayed by design ]</p>
+      <div class="rail"></div>
+      <div class="d-flex justify-content-center gap-4">
+        <a href="#listen">LISTEN</a>
+        <a href="#contact">BOOKINGS</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="listen" class="section">
+    <div class="container">
+      <h2 class="mb-4">SOUND NETWORK</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h6>ARTIST PAGE</h6>
+          <p>Long-form sets & infrastructure sound.</p>
+          <a href="https://soundcloud.com/fabian-rose-142757410" target="_blank">Open SoundCloud →</a>
+        </div>
+        <div class="col-md-4">
+          <h6>SET ME UP</h6>
+          <p>170+ tracks. Main line selection.</p>
+          <a href="https://soundcloud.com/fabian-rose-142757410/sets/set-me-up" target="_blank">Listen →</a>
+        </div>
+        <div class="col-md-4">
+          <h6>GLEIS_001</h6>
+          <p>Schranz Express. High-speed pressure.</p>
+          <a href="https://soundcloud.com/fabian-rose-142757410/sets/gleis_001" target="_blank">Listen →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container col-md-8">
+      <p>
+        Distortion Bahn is not a DJ alias.<br />
+        It is a transport system for sound pressure.<br /><br />
+        Techno as infrastructure.<br />
+        Schranz as acceleration.<br /><br />
+        No destinations.<br />
+        Only movement.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section text-center">
+    <div class="container">
+      <h6>BOOKINGS / MEETINGS / SIGNAL REQUESTS</h6>
+      <p class="mt-3">
+        <a href="mailto:distortionbahn@gmail.com">distortionbahn@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    DISTORTION BAHN<br />
+    ∿ signal lost • ⌁ rhythm found<br />
+    [ delayed by design ]
+  </footer>
+
+</body>
+</html>
